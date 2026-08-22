@@ -9,17 +9,13 @@ construyendo**, para que cuando lo tengas puedas mirarlo y saber si está comple
 
 ## Lo que vas a construir
 
-Un **sistema de agentes**: varios agentes encadenados, donde cada uno hace un trabajo
+Un **agente** o varios pequeños encadenados, donde cada uno hace un trabajo
 que empieza y termina en un lugar definido, y le deja al siguiente algo que el
 siguiente puede leer sin haber estado presente.
 
-La prueba de que el sistema está bien cortado: **si cerrás la conversación y volvés
-mañana, cada agente tiene que poder arrancar solo.** Si un agente necesita que alguien
-recuerde algo, ese agente todavía no está terminado.
-
 ---
 
-## El mapa
+## El mapa de construcción
 
 ```
    ┌─────────────────────  L I B E R T A D  ─────────────────────┐
@@ -94,7 +90,7 @@ difícil de verificar. **Elegirla es tu trabajo, no del modelo.**
 
 ## Plantilla
 
-Completá esto para **cada** agente de tu sistema, antes de escribir su código.
+Durante la entrevista, se debiera poder definir los siguientes puntos para el sistema:
 
 ```
 AGENTE: ___________________________________
@@ -108,7 +104,7 @@ PREFERENCIAS (como quiero que haga las cosas)
 
 CONTEXTO
   datos que necesita:  _______________________
-  de dónde los saca:   _______________________
+  de dónde los saca y quién se los provee:   _______________________
   skills que usa:      _______________________
 
 HARNESS
@@ -116,29 +112,26 @@ HARNESS
   MCPs — NO puede:     _______________________
   validaciones:        _______________________
   interviene un humano: sí / no · dónde: _____
-
+```
 
 ---
 
 ## Cómo se ve completada
 
-Esto muestra **la forma** de una respuesta terminada, no la respuesta. El cómo es tuyo.
-
+Esto muestra **la forma** de una respuesta terminada, como un ejemplo de referencia:
 ```
 AGENTE: buscador
 
 PROPÓSITO
-  parte de:     un link de portal inmobiliario con una zona del mapa
-  termina con:  una extracción del listado de propiedades publicadas en ese link
+  parte de:     un deseo de invertir mis ahorros y no saber cómo elegir la mejor inversión inmobiliaria
+  termina con:  un mail y una agenda en el calendario para ir a visitar una propiedad priorizada y analizada previamente
 
-DISEÑO
-  por qué existe separado: se enfoca en navegar Portal Inmobiliario y extraer exitosamente las cards de cada listado
 
 PREFERENCIAS
-  ninguna propiedad repetida · quiero saber por qué se detuvo . Quiero que el proceso tenga un time out de 10 minutos . Quiero saber si el trabajo solicitado tiene una estimación mayor a 30 minutos y como descomponerlo
+  ninguna propiedad repetida · Validaciones imparciales . Quiero que el proceso tenga un time out de 10 minutos . Quiero saber si el trabajo solicitado tiene una estimación mayor a 30 minutos y como descomponerlo . Quiero propiedades de 2 y 3 dormitorios
 
 CONTEXTO
-  datos que necesita:  la zona, link
+  datos que necesita:  la zona, link del sector a analizar
   de dónde los saca:   usuario entrega a partir de su selección en la web
   skills que usa:      portal-inmobiliario-scraper (o nombre similar) ← lo crea el usuario
 
@@ -146,10 +139,5 @@ HARNESS
   MCPs — puede tocar:  un navegador, Chrome MCP, el sistema de archivos
   MCPs — NO puede:     Gmail, Calendario
   validaciones:        cantidad de listados por cantidad de páginas, duplicados, timeout, límite de listado
-  interviene un humano: no
-
-
+  interviene un humano: si
 ```
-
-Fijate en la última línea de LIBERTAD. Ese agente decide **cómo**, nunca **qué**. Esa
-separación es lo que hace que dos corridas distintas sean comparables entre sí.

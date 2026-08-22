@@ -1,14 +1,12 @@
-# Taller MBA UC — sistema de agentes
+# Taller MBA UC —  agente airbnb
 
-Esto es el piso del taller. **No hay ningun sistema hecho aca**: hay los datos que
-no vas a poder conseguir en cuatro horas, el marco para saber que estas
-construyendo, y una skill que te ayuda a decidir el diseno antes de escribir codigo.
+Esto es una referencia para el taller. **No hay ningun sistema hecho aca**: hay algunos datos para agilizar partes del desarrollo propuesto, el framework para seguir las guías de desarrollo, y una skill que te ayuda a decidir el diseno antes de escribir codigo.
 
 | Archivo | Que es |
 |---|---|
-| `marco-de-agentes.md` | Que es un agente y que es un sistema de agentes. Trae una plantilla para completar por cada agente y un ejemplo de como se ve completada. |
-| `supuestos.yaml` | Tarifa y ocupacion por tipologia con estacionalidad de 12 meses, gastos comunes, costos de operacion, equipamiento y parametros del credito. Son un **piso**, no una verdad. |
-| `skills/entrevistador-de-diseno/` | Una skill que entrevista con insistencia hasta que el diseno queda cerrado. |
+| `marco-de-agentes.md` | El framework acá. Trae una plantilla para seguir el diseño y un ejemplo de como se ve completada. |
+| `supuestos.yaml` | Tarifa y ocupacion por tipologia con estacionalidad de 12 meses, gastos comunes, costos de operacion, equipamiento y parametros del credito. Son una **referencia**, ejemplo para completar datos en la sección del evaluador financiero. |
+| `skills/entrevistador-de-diseno/` | Una skill que entrevista al usuario hasta que el diseno queda cerrado. |
 
 ---
 
@@ -63,34 +61,10 @@ Copy-Item -Recurse skills\entrevistador-de-diseno .claude\skills\
 Para confirmar que quedo, abri Claude Code en esta carpeta y pedile que liste las
 skills que tiene cargadas.
 
-## 5. Arranca
+## 5. Arranca, seguí los pasos propuestos
 
 ```
 claude
 ```
 
-Y usa la skill para cerrar el diseno antes de escribir nada.
-
----
-
-## Si algo se rompe
-
-**`./algo.sh` no funciona en Windows.** Los scripts `.sh` son de Mac y Linux. Por eso
-aca no hay ninguno: todos los comandos estan escritos para los dos sistemas.
-
-**PowerShell no me deja correr un script.** Windows bloquea scripts por defecto. En
-este repo no hace falta ninguno, pero si mas adelante necesitas uno, se habilita solo
-para esa ventana con `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`.
-
-**`python` funciona pero `python3` no, o al reves.** En Mac suele ser `python3`; en
-Windows suele ser `python`. Usa el que responda.
-
-**Necesito un entorno virtual de Python.** Se crea igual pero se activa distinto:
-
-| | Crear | Activar |
-|---|---|---|
-| Mac | `python3 -m venv .venv` | `source .venv/bin/activate` |
-| Windows | `python -m venv .venv` | `.venv\Scripts\Activate.ps1` |
-
-**Quiero actualizar los archivos.** Si se corrige algo antes de la clase, `git pull`
-dentro de esta carpeta trae la version nueva sin volver a clonar.
+En la terminal, o abri el Claude Code de escritorio.
