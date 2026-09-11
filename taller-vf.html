@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta charset="utf-8"><meta charset="utf-8"><meta charset="utf-8">
+<html lang="es"><head><meta charset="utf-8"><meta charset="utf-8"><meta charset="utf-8"><meta charset="utf-8"><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Taller MBA UC · sistema de agentes</title>
 <style>
@@ -116,7 +116,7 @@ footer{margin-left:260px;border-top:1px solid var(--border);padding:26px 40px;
   <section class="blk" id="inicio">
     <div class="eyebrow">Trabajo práctico</div>
     <h2>Construir un agente que identifique oportunidades de inversión para Airbnb en Santiago</h2>
-    <p class="sub">El objetivo es que puedas desarrollar una corrida hecha con vibe-coding que busca propiedades, extrae, las evalúa, presenta un modelo financiero, se pone en contacto con la corredora y te agenda en tu calendario la visita.</p>
+    <p class="sub">El objetivo es que puedas desarrollar una corrida hecha con vibe-coding que busca propiedades de tu preferencia, extrae, las evalúa, presenta un modelo financiero, se pone en contacto con la corredora y te agenda en tu calendario la visita.</p>
     <div class="pills"><a class="pill" href="#p1"><b>1</b>Definir</a><a class="pill" href="#p2"><b>2</b>Skill del portal</a><a class="pill" href="#p3"><b>3</b>Notion</a><a class="pill" href="#p4"><b>4</b>Priorizar</a><a class="pill" href="#p5"><b>5</b>Evaluador</a><a class="pill" href="#p6"><b>6</b>Contactar</a><a class="pill" href="#p7"><b>7</b>Supervisar</a></div>
     <div class="nota">Se entregan algunos datos y archivos guía menores para poder avanzar a una versión funcional en 4 horas.&nbsp;</div>
   </section>
@@ -142,14 +142,13 @@ footer{margin-left:260px;border-top:1px solid var(--border);padding:26px 40px;
 
   <section class="blk" id="repositorio">
     <div class="eyebrow">Repositorio</div>
-    <h2>Bajá los archivos con Claude Code</h2>
-    <p class="sub">Todo lo que necesitás está en un repositorio público. <b>No lo bajes a mano:
-    pedíselo a Claude Code y aprobá el comando.</b></p>
+    <h2>Accedé al repositorio desde tu terminal</h2>
+    <p class="sub">Todo lo que necesitás está en un repositorio público. <b>No lo bajes a mano. Pedile a tu LLM</b></p>
 
     <ul class="simple" style="margin-top:16px">
       <li><b>Creá una carpeta vacía</b> donde quieras trabajar.
-        En Mac desde Finder, en Windows desde el Explorador. El nombre da igual.</li>
-      <li><b>Abrí Claude Code Desktop</b> y apuntalo a esa carpeta.
+        En Mac desde Finder, en Windows desde el Explorador.</li>
+      <li><b>Abrí Claude Code</b>&nbsp;y apuntalo a esa carpeta.
         Todo el proyecto va a vivir ahí.</li>
       <li><b>Pegá este prompt</b> y aprobá los comandos que te proponga.
         Claude elige el comando correcto para tu sistema operativo.</li>
@@ -168,12 +167,11 @@ taller-mba-uc/skills/entrevistador-de-diseno a .claude/skills/ de este
 proyecto, usando el comando que corresponda a mi sistema operativo.
 
 Cuando termines, mostrame que archivos quedaron y confirmame que la skill
-quedo disponible.</pre>
+quedo disponible. No hagas nada más que lo solicitado hasta que de nuevas instrucciones.</pre>
     </div>
 
-    <div class="nota"><b>Aprobá cada comando, no le des a todo que sí.</b> Claude Code te pide
-    permiso antes de tocar archivos o correr algo en tu terminal. Leé qué te está por correr:
-    ese hábito es la mitad del taller.</div>
+    <div class="nota">Claude Code te pide
+    permiso antes de tocar archivos o correr algo en tu terminal. Podés configurar esos permisos en tu cuenta.</div>
 
     <p style="margin-top:22px;font-size:14.5px;color:var(--muted)">
       Lo que Claude va a correr por debajo, por si querés verlo:</p>
@@ -192,10 +190,10 @@ quedo disponible.</pre>
     </div>
 
     <div class="nota" style="margin-top:16px"><b>Ojo con la ruta.</b> <code>git clone</code> crea la
-    carpeta <code>taller-mba-uc</code> adentro de la tuya, así que la skill queda ahí dentro y no en
-    la raíz. Si el comando te dice que no encuentra el directorio, es esto.</div>
+    carpeta <code>taller-mba-uc</code> adentro de la que definiste como trabajo, así que la skill queda ahí dentro y no en
+    la raíz.</div>
 
-    <p style="margin-top:26px;font-size:14.5px;color:var(--muted)"><b>Qué te bajaste:</b></p>
+    <p style="margin-top:26px;font-size:14.5px;color:var(--muted)"><b>Qué hay en el repositorio:</b></p>
 <div class="cards">
       <div class="card"><div class="l">marco de agentes</div>
         <h3>Guía de diseño</h3>
@@ -232,8 +230,7 @@ quedo disponible.</pre>
 operar como Airbnb, los evalue financieramente, así los puedo elegir. Luego que me prepare un borrador de contacto con la corredora y me agende un espacio en mi calendario, para las propiedades aprobadas por mi que quiero visitar.
 
 Antes de escribir codigo quiero que me entrevistes para dejar el diseño general por escrito. Entrevistame con
-preguntas -una por vez, con tu recomendacion en cada una- sobre mis preferencias, objetivos, finalidad, restricciones, limitaciones, consideraciones, parametros de diseño, entre otros, hasta que quede
-definido:
+preguntas -una por vez, máximo 10, con tu recomendacion en cada una - sobre mis preferencias, objetivos, finalidad, restricciones, limitaciones, consideraciones, parametros de diseño, entre otros, hasta que quede definido:
 
 1. los objetivos, preferencias, elementos del sistema, secuencia y donde empieza y termina el trabajo de cada tarea
 2. que informacion necesita cada uno para arrancar sin contexto previo, y de donde sale
@@ -243,9 +240,9 @@ definido:
 
 El plan del diseño general, lo quiero en un backlog.md donde estén los items paso a paso de lo que vamos a hacer. Si te doy un prompt en el futuro que está alineado con algun backlog item, avisame así abrimos el item y avanzamos. Fundamental tener un backlog estructurado para nuestro proceso. 
 
-Los hechos que puedas averiguar solo (que hay en el filesystem) averigualos. Las decisiones finales son mias.
+Los hechos que puedas averiguar solo (que hay en el filesystem) averigualos. Las decisiones finales son mias. 
 
-Si te compartí antes una URL de PortalInmobiliario, guardala pero no la analices en este paso. Solamente diseño ahora.
+Si te compartí antes una URL de PortalInmobiliario, guardala pero no la analices en este paso. Solamente diseño ahora. Si no te la di, pedimela.
 
 Cuando lleguemos a acuerdo, escribi CLAUDE.md con las reglas y specs.md con los detalles acordados. No escribas nada mas ni propongas próximos pasos hasta que yo confirme.</pre>
     </div>
@@ -279,7 +276,7 @@ El skill tiene que cortar por lo primero que ocurra entre: una pagina con
 menos resultados que el maximo (es la ultima), un tope de propiedades que yo
 defino, o un timeout en minutos que yo defina (preguntame). todos parámetros que deben ser definidos para la creación de esta skill. El motivo de corte se escribe en el archivo de salida.
 
-Guarda un snapshot crudo antes de filtrar nada. El objetivo de la skill es aprender a hacer el scrap, y que puedas informarme a mí la estructura que existe para poder armar mi database.</pre>
+Guarda un snapshot crudo antes de filtrar nada. El objetivo de la skill es aprender a hacer el scrap, y que puedas informarme a mí la estructura que existe para poder armar mi database. Preguntame el nombre que le vamos a dar a la skill y que quede dentro del proyecto.</pre>
     </div>
     <label class="hecho"><input type="checkbox" data-paso="2" onchange="marcar()"> Terminé este paso</label>
   </div></div>
@@ -299,7 +296,7 @@ Guarda un snapshot crudo antes de filtrar nada. El objetivo de la skill es apren
     <div class="pbox">
       <div class="pbar"><span>prompt para copiar y pegar en claude</span>
         <button class="cop" onclick="copiar(this)">COPIAR</button></div>
-      <pre>Ya tenemos el snapshot con las propiedades. Ahora quiero estructurar una base en Notion.
+      <pre>Ya tenemos el snapshot con las propiedades y el skill, entonces sabemos como llegará el dato. Ahora quiero estructurar una base en Notion.
 
 Primero mostrame que campos trae realmente el snapshot y propone un esquema
 sobre eso: tipo de cada columna, y cuales escribe el sistema y cuales escribo
@@ -340,7 +337,7 @@ Reglas:
   un 2D2B.
 - si un grupo tiene menos de 5 propiedades, no reportes percentil: marcalo
   como grupo chico.
-- nada de score compuesto con pesos.
+- nada de score compuesto con pesos
 - Proponeme otros análisis que puedan ser posibles hacer y yo decido si quiero hacerlos o no, en caso que no sea prioritario podes proponerme agregarlos al backlog
 
 Escribi el resultado de vuelta en Notion y dejá el script en el repo.</pre>
@@ -360,12 +357,11 @@ Escribi el resultado de vuelta en Notion y dejá el script en el repo.</pre>
     <span class="chev">⌄</span>
   </button>
   <div class="cuerpo"><div class="cuerpo-in">
-    <ul><li>Los supuestos te los damos en <code>supuestos.yaml</code>&nbsp;y son parte de los archivos que descargaste. Contiene referencias de tarifa y ocupación por tipología con estacionalidad de 12 meses, gastos comunes, equipamiento y parámetros del crédito.</li><li>Son una referencia. Podés modificarlos como gustes.</li><li>Que el resultado muestre el punto de equilibrio, no sólo el retorno.&nbsp;</li><li><strong>Y acá decidís de nuevo, que es el punto del paso:</strong> movele los supuestos antes de elegir. No apruebes la mejor al 4%, aprobá la que aguanta al 5,5%.</li><li>Marcá tu decisión en Notion. Prepara una columna específica para aprobar 1 a 3 propiedades que quieras visitar.</li></ul>
+    <ul><li>Los supuestos te los damos en <code>supuestos.yaml</code>&nbsp;y son parte de los archivos que descargaste. Contiene referencias de tarifa y ocupación por tipología con estacionalidad de 12 meses, gastos comunes, equipamiento y parámetros del crédito.</li><li>Son una referencia. Podés modificarlos como gustes.</li><li>Que el resultado muestre el punto de equilibrio, no sólo el retorno.&nbsp;</li><li><strong>Y acá decidís de nuevo, que es el punto del paso:</strong> mueve los supuestos antes de elegir.&nbsp;</li><li>Marcá tu decisión en Notion. Prepara una columna específica para aprobar 1 a 3 propiedades que quieras analizar.</li></ul>
     <div class="pbox">
       <div class="pbar"><span>prompt para copiar y pegar en claude</span>
         <button class="cop" onclick="copiar(this)">COPIAR</button></div>
-      <pre>Quiero un evaluador financiero en un solo archivo HTML, para decidir si
-una propiedad funciona como Airbnb.
+      <pre>Quiero un evaluador financiero en un solo archivo HTML, para analizar las mejores propiedades que voy a ir a visitar.
 
 Carga los supuestos desde supuestos.yaml: tarifa y ocupacion por tipologia
 (son curvas de 12 meses, no promedios), costos de operacion, equipamiento con
@@ -432,7 +428,7 @@ invitacion. Todo queda como archivo para que yo revise y decida.</pre>
     <span class="chev">⌄</span>
   </button>
   <div class="cuerpo"><div class="cuerpo-in">
-    <ul><li>Poné a prueba tu sistema, buscando vulnerabilidades, mejoras, eficiencias, puntos ciegos, entre otros</li><li>Cada paso tiene que cerrar en verde o no cerrar. Contar filas, recalcular un número y comparar, verificar que un archivo contiene una palabra.</li><li>Corré todo de punta a punta al final. Un sistema que funciona por partes no es un sistema.</li></ul>
+    <ul><li>Poné a prueba tu sistema, buscando vulnerabilidades, mejoras, eficiencias, puntos ciegos, entre otros</li><li>Podes probar crear límites a cada agente, como permisos, tiempo de acción, capacidades, integraciones, entre otros.</li><li>Pensalo como un sistema continuo. Qué tipo de aprendizajes o actualización de memoria hace sentido tener en corridas futuras?</li></ul>
     <div class="pbox">
       <div class="pbar"><span>prompt para copiar y pegar en claude</span>
         <button class="cop" onclick="copiar(this)">COPIAR</button></div>
@@ -471,6 +467,7 @@ Para las propuestas que apruebe realizar, agregalas al backlog para planificar s
 
 <script>
 var K='taller-mba-uc-avance';
+
 
 function toggle(b){
   b.closest('.paso').classList.toggle('abierta');
